@@ -3,7 +3,7 @@ import {
 } from 'redux'
 
 import DashboardReducer from '../dashboard/dashboardReducer'
-import TabReducer from '../common/tab/tabRecuder'
+import TabReducer from '../common/tab/tabReducer'
 
 const rootReducer = combineReducers({
     dashboard: DashboardReducer,
