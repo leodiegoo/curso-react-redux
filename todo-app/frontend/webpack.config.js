@@ -1,6 +1,8 @@
 const webpack = require('webpack')
 const ExtrackTextPlugin = require('extract-text-webpack-plugin')
 
+
+
 module.exports = {
     entry: './src/index.jsx',
     output: {
@@ -18,7 +20,10 @@ module.exports = {
         }
     },
     plugins: [
-        new ExtrackTextPlugin('app.css')
+        new ExtrackTextPlugin('app.css'),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev')
+        })
     ],
     module: {
         loaders: [{

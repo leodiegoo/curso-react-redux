@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getList, showUpdate, showDelete } from './billingCycleActions'
 
 class BillingCycleList extends Component {
+
     componentWillMount() {
         this.props.getList()
     }
@@ -48,6 +49,6 @@ class BillingCycleList extends Component {
     }
 }
 
-const mapStateToProps = state => ({ list: state.billingCycle.list })
-const mapDispatchToProps = dispatch => bindActionCreators({ getList, showUpdate, showDelete }, dispatch)
+const mapStateToProps = state => ({list: state.billingCycle.list})
+const mapDispatchToProps = dispatch => bindActionCreators({getList, showUpdate, showDelete}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(BillingCycleList)
